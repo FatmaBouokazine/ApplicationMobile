@@ -45,6 +45,7 @@
             android:padding="10sp">
 
             <EditText
+                android:id="@+id/idName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
@@ -56,6 +57,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/idEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
@@ -67,6 +69,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/idCin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
@@ -78,6 +81,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/idPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
@@ -89,6 +93,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/idPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15sp"
@@ -103,6 +108,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/idButtonSignUp"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
