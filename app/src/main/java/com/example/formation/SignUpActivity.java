@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.formation.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -94,6 +97,12 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    private void sendUserData() {
+        FirebaseDatabase firebaseDatabase= FirebaseDatabase.getInstance();
+        DatabaseReference myReference=firebaseDatabase.getReference("Users");
+        User user=new User(fullNameS,emailS,cinS,phoneS,passwordS);
+        myReference.child(""+firebaseAuth.getUid()).setValue(user);
     }
 
     private boolean validate() {
